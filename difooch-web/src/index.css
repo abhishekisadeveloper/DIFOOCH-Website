@@ -1,8 +1,19 @@
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
-/* theme.css */
+
+  .textThree {
+    font-family: var(--font-family-jakarta);
+    color: var(--color-primary);
+    background-color: var(--color-white);
+    margin: 0;
+    padding: 0;
+    font-size: var(--text-heading-large);
+    line-height: var(--leading-heading-large);
+    font-weight: bold;
+  }
 :root {
-  /* 🎨 Colors */
+  /* Colors */
   --color-primary: #0B7D3F;
   --color-secondary: #F4F5F0;
   --color-accent: #FDD835;
@@ -37,5 +48,6 @@
   --text-small: 14px;
   --leading-small: 24px;
 }
-@import "tailwindcss";
+
+
 

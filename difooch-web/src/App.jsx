@@ -5,7 +5,7 @@ const App = () => {
   return (
     <>
       <div >
-        <Typography variant="h1">Hello World</Typography>
+        <Typography className="textThree" variant="h1">Hello Abhishek </Typography>
       </div>
     </>
   )
