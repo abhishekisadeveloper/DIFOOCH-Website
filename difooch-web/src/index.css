@@ -1,18 +1,11 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
 
+.APP{
+  font-family: var(--font-family-jakarta);
+}
 
-  .textThree {
-    font-family: var(--font-family-jakarta);
-    color: var(--color-primary);
-    background-color: var(--color-white);
-    margin: 0;
-    padding: 0;
-    font-size: var(--text-heading-large);
-    line-height: var(--leading-heading-large);
-    font-weight: bold;
-  }
-:root {
+@theme {
   /* Colors */
   --color-primary: #0B7D3F;
   --color-secondary: #F4F5F0;
@@ -20,9 +13,10 @@
   --color-required: #D0021B;
   --color-success: #0B7D3F;
   --color-black1: #0D1A12;
+  --color-lightGreen: #B7EFD1;
   --color-white: #FFFFFF;
   --color-gray1: #444444;
-  --color-gray2: #717276;
+  --color-gray2: #717276; 
   --color-gray3: #B7BCCA;
   
   /* Typography */
@@ -31,12 +25,21 @@
   /* Headings */
   --text-heading-large: 56px;
   --leading-heading-large: 64px;
+  /* Mobile Headings */
+  --text-mobile-heading-large: 28px;
+  --leading-mobile-heading-large: 34px;
 
   --text-heading-medium: 32px;
   --leading-heading-medium: 40px;
+  /* Mobile Headings */
+  --text-mobile-heading-medium: 18px;
+  --leading-mobile-heading-medium: 24px;
 
   --text-heading-small: 24px;
   --leading-heading-small: 32px;
+  /* Mobile Headings */
+  --text-mobile-heading-small: 16px;
+  --leading-mobile-heading-small: 20px;
 
   /* Body text */
   --text-large: 18px;
@@ -47,7 +50,5 @@
 
   --text-small: 14px;
   --leading-small: 24px;
+  --leading-small2: 20px;
 }
-
-
-
