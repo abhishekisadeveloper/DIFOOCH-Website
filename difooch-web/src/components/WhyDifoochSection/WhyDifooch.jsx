@@ -13,7 +13,7 @@ const WhyDifooch = () => {
       <ul className="flex flex-col pt-[30px] w-full gap-4">
         {WhyDifoochData[0].whyDifoochList1.map((item, index) => (
           <li className="flex items-center">
-            <div className="flex gap-[8.12px] rounded-[15px] w-full p-4 bg-secondary text-black1 font-bold items-center">
+            <div className="flex gap-[8.12px] rounded-[15px] w-full p-4 bg-light-white text-black1 font-bold items-center">
             <img
             className="bg-secondary font rounded-[8px]"
               src={item.iconLink}

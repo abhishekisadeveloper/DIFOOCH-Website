@@ -9,19 +9,19 @@ export const WhyDifoochData = [
       },
       {
         iconLink: "/WhyDifoochAssets/icon2.svg",
-        text: "Zero Commissions",
+        text: "Your Website Branded",
       },
       {
         iconLink: "/WhyDifoochAssets/icon3.svg",
-        text: "Zero Commissions",
+        text: "Instant Order Notifications",
       },
       {
         iconLink: "/WhyDifoochAssets/icon4.svg",
-        text: "Zero Commissions",
+        text: "Direct Payments to Your Bank",
       },
       {
         iconLink: "/WhyDifoochAssets/icon5.svg",
-        text: "Zero Commissions",
+        text: "You Handle Delivery, Your way",
       },
     ]
   },

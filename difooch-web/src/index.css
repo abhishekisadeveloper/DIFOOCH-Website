@@ -8,13 +8,14 @@
 @theme {
   /* Colors */
   --color-primary: #0B7D3F;
-  --color-secondary: #F4F5F0;
+  --color-secondary: #FFF7EB;
   --color-accent: #FDD835;
   --color-required: #D0021B;
   --color-success: #0B7D3F;
   --color-black1: #0D1A12;
   --color-lightGreen: #B7EFD1;
   --color-white: #FFFFFF;
+  --color-light-white: #F4F5F0;
   --color-gray1: #444444;
   --color-gray2: #717276; 
   --color-gray3: #B7BCCA;
