@@ -14,17 +14,18 @@ const WhyDifooch = () => {
         {WhyDifoochData[0].whyDifoochList1.map((item, index) => (
           <li className="flex items-center">
             <div className="flex gap-[8.12px] rounded-[15px] w-full p-4 bg-light-white text-black1 font-bold items-center">
-            <img
-            className="bg-secondary font rounded-[8px]"
-              src={item.iconLink}
-            alt="icon1"
-          />
-          <Typography variant="p">
-            {item.text}
-          </Typography>
-          </div>
-        </li>
-      ))}
+              <img
+                className="bg-secondary rounded-[8px]"
+                src={item.iconLink}
+                alt="icon1"
+                loading="lazy"
+                width="40"
+                height="40"
+              />
+              <Typography variant="p">{item.text}</Typography>
+            </div>
+          </li>
+        ))}
       </ul>
     </div>
   );

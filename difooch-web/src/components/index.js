@@ -5,3 +5,4 @@ export { Typography } from './UI/Typography/Typography';
 // Data exports
 export { WhyDifoochData } from '../data/StaticContent/WhyDifooch';
 export { HeroData } from '../data/StaticContent/HeroData';
+export { HowItWorksData } from '../data/StaticContent/HowItWorks';

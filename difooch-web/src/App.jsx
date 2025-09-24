@@ -2,11 +2,13 @@ import "./index.css";
 import Logo from "./components/Logo";
 import HeroSection from "./components/HeroSection/HeroSection";
 import WhyDifooch from "./components/WhyDifoochSection/WhyDifooch";
+import HowItWorks from "./components/HowItWorks/HowItWorks";
 
 const App = () => {
   return (
     <>
-      <div className="bg-secondary max-w-[1440px] mx-auto APP">
+    <div className="bg-secondary">
+      <div className="max-w-[1440px] mx-auto APP">
           <Logo />
           {/* horizontal line */}
           <div className="w-full h-[1px] mt-[16px]">
@@ -20,8 +22,10 @@ const App = () => {
 
           <HeroSection />
           <WhyDifooch />
+          <HowItWorks />
         </div>
       </div>
+    </div>
     </>
   );
 };

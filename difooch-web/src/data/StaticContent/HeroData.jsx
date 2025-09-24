@@ -7,7 +7,7 @@ export const HeroData = [
         And yes, <span className="font-bold text-black1">your money</span>, straight to your account.
       </>
     ),
-    heroImage: "./HeroImagesAssets/heroImg.png",
+    heroImage: "./HeroImagesAssets/heroImg.svg",
     heroButton: {
       icon: "./HeroImagesAssets/rocket.svg",
       text: "Start Free Trial",
