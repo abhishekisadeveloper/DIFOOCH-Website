@@ -1,4 +1,4 @@
-export const Button = ({ variant = "primary", children, className, icon, iconWidth = "20", iconHeight = "20" }) => {
+export const Button = ({ variant = "primary", children, className, icon }) => {
   const staticStyles =
     "flex items-center gap-2 cursor-pointer hover:border-[1px] hover:border-primary border-[1px] border-transparent transition-all duration-300";
   const styles = {
@@ -15,8 +15,6 @@ export const Button = ({ variant = "primary", children, className, icon, iconWid
         <img
           src={icon}
           alt="rocket icon"
-          width={iconWidth}
-          height={iconHeight}
         />
       )}
       {children}

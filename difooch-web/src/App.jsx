@@ -3,7 +3,11 @@ import Logo from "./components/Logo";
 import HeroSection from "./components/HeroSection/HeroSection";
 import WhyDifooch from "./components/WhyDifoochSection/WhyDifooch";
 import HowItWorks from "./components/HowItWorks/HowItWorks";
-
+import Advantages from "./components/Advantages/Advantages";
+import Testimonials from "./components/Testimonials/Testimonials";
+import Features from "./components/Features/Features";
+import MultiLocation from "./components/MultiLocation/MultiLocation";
+import Price from "./components/Price/Price";
 const App = () => {
   return (
     <>
@@ -19,11 +23,17 @@ const App = () => {
             />
           </div>
         <div className="flex flex-col items-center mx-9">
-
           <HeroSection />
           <WhyDifooch />
           <HowItWorks />
         </div>
+          <Advantages />
+          <div className="flex flex-col items-center mx-9">
+            <Testimonials />
+            <Features />
+            <MultiLocation />
+            <Price />
+          </div>
       </div>
     </div>
     </>
