@@ -17,7 +17,7 @@ const App = () => {
       <div className="max-w-[1440px] mx-auto APP">
           <Logo />
           {/* horizontal line */}
-          <div className="w-full h-[1px] mt-[16px]">
+          <div className="w-full h-[1px] mt-4 sm:mt-8">
             <img
               className="w-full h-full"
               src="./horizontalLine.png"

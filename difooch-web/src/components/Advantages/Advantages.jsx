@@ -3,13 +3,13 @@ import { Typography, AdvantageData } from "../index";
 
 const Advantages = () => {
   return (
-    <div className="flex flex-col items-center text-center my-12">
+    <div className="flex flex-col items-center text-center my-12 sm:my-[90px]">
       <Typography className='flex flex-col items-center mx-9' variant="h2">
         {AdvantageData[0].AdvantagesDataHeading}
       </Typography>
 
       {/* Slider wrapper */}
-      <div className="flex items-center text-center gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar w-full py-6">
+      <div className="flex items-center text-center gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar w-full py-6 sm:py-12">
         {AdvantageData[0].AdvantagesDataLists.map((item) => (
           // Cards.
           <div

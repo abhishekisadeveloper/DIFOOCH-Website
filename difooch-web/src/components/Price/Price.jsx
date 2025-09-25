@@ -3,30 +3,31 @@ import { Typography, PriceData, Button } from "../index";
 
 const Price = () => {
   return (
-    <div className="flex flex-col items-center mb-12">
-      <Typography className="mb-[30px]" variant="h2">
+    <div className="flex flex-col items-center mb-12 sm:mb-[90px]">
+      <Typography className="mb-[30px] sm:mb-12" variant="h2">
         {PriceData[0].PriceHeading}
       </Typography>
+      <div className="flex flex-col justify-center sm:flex-row sm:flex-wrap items-center sm:gap-12">
       {PriceData[0].PriceLists.map((item) => {
         return (
           <div
-            className="flex flex-col items-start mb-[30px] relative border-[1px] border-[#D1E5D9] rounded-[8px] p-[20px] w-[318px] bg-white"
+            className="flex flex-col items-start mb-[30px] sm:mb-0 relative border-[1px] border-[#D1E5D9] sm:border-primary rounded-[8px] sm:rounded-[9.59px] p-[20px] w-[318px] sm:w-[378px] bg-white"
             key={item.id}
           >
-            <Typography className="text-black1 mb-1" variant="h3">
+            <Typography className="text-black1 sm:text-heading-small3 mb-1" variant="h3">
               {item.category}
             </Typography>
             <div className="flex items-center mb-4 gap-1">
               <Typography
-                className="font-family-poppins text-heading-medium font-bold"
+                className="font-family-poppins text-heading-medium sm:text-heading-large2 font-bold"
                 variant="span"
               >
                 {item.amount}
               </Typography>
-              <Typography variant="h3">{item.duration}</Typography>
+              <Typography className='sm:text-large sm:font-bold' variant="h3">{item.duration}</Typography>
             </div>
             <Button
-              className="justify-center py-3 mb-4 w-full hover:bg-success hover:text-white"
+              className="justify-center sm:text-medium sm:font-bold py-3 mb-4 w-full hover:bg-success hover:text-white"
               variant="secondary"
             >
               Get Started
@@ -56,17 +57,19 @@ const Price = () => {
           </div>
         );
       })}
-      <div className="flex items-center gap-[11.71px]">
+      </div>
+      <div className="flex items-center sm:mt-12 gap-[11.71px] sm:gap-12">
         <Button
-        className="justify-center w-[158.97px] h-[39.02] rounded-[7.8px] py-3 mb-4 hover:bg-accent2"
+        className="justify-center sm:gap-3 sm:text-heading-small3 w-[158.97px] sm:w-[230px] h-[39.02] sm:h-[64px] rounded-[7.8px] py-3 mb-4 sm:mb-0 hover:bg-accent2"
         variant="primary" icon='./PriceAssets/callIcon.svg'
       >
         Talk to Sales
       </Button>
       <Button
-        className="justify-center w-[158.97px] h-[39.02] rounded-[7.8px] py-3 mb-4 bg-white"
-        variant="primary" icon='./PriceAssets/arrow.svg'
+        className="justify-center sm:text-heading-small3 w-[158.97px] sm:w-[230px] h-[39.02] sm:h-[64px] rounded-[7.8px] py-3 mb-4 sm:mb-0 bg-white"
+        variant="primary" 
       >
+        <img className="w-[24px] h-[24px] sm:w-[32px] sm:h-[32px]" src="./HeroImagesAssets/rocket.svg" alt="arrow" />
         Talk to Sales
       </Button>
       </div>

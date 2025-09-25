@@ -35,6 +35,7 @@
 
   /* Headings */
   --text-heading-large: 56px;
+  --text-heading-large2: 40px;
   --leading-heading-large: 64px;
   /* Mobile Headings */
   --text-mobile-heading-large: 28px;
@@ -47,6 +48,8 @@
   --leading-mobile-heading-medium: 24px;
 
   --text-heading-small: 24px;
+  --text-heading-small2: 22px;
+  --text-heading-small3: 20px;
   --leading-heading-small: 32px;
   /* Mobile Headings */
   --text-mobile-heading-small: 16px;

@@ -7,11 +7,11 @@ export const FooterData = [
       },
       {
         id: 2,
-        title: "Contact Us",
+        title: "Contact",
       },
       {
         id: 3,
-        title: "Terms & Conditions",
+        title: "Terms of Service",
       },
       {
         id: 4,

@@ -3,17 +3,17 @@ import { WhyDifoochData, Typography } from "../index";
 
 const WhyDifooch = () => {
   return (
-    <div className="flex flex-col my-[48px] p-5 bg-white rounded-[15px] items-center text-center">
-      <Typography variant="h2">
+    <div className="flex flex-col my-[48px] sm:my-[90px] w-full p-5 bg-white rounded-[15px] items-center text-center">
+      <Typography className="sm:my-6" variant="h2">
         {WhyDifoochData[0].whyDifoochHeading}
       </Typography>
-      <Typography className="pt-6 text-small leading-small2" variant="p">
+      <Typography className="pt-6 text-small md:w-[85%] leading-small2" variant="p">
         {WhyDifoochData[0].whyDifoochSubHeading}
       </Typography>
-      <ul className="flex flex-col pt-[30px] w-full gap-4">
+      <ul className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center pt-[30px] sm:pt-10 w-full sm:w-[752px] sm:mb-6 gap-4 sm:gap-8">
         {WhyDifoochData[0].whyDifoochList1.map((item, index) => (
           <li className="flex items-center">
-            <div className="flex gap-[8.12px] rounded-[15px] w-full p-4 bg-light-white text-black1 font-bold items-center">
+            <div className="flex gap-[8.12px] sm:w-[360px] rounded-[15px] w-full p-4 bg-light-white text-black1 font-bold items-center">
               <img
                 className="bg-secondary rounded-[8px] w-10 h-10"
                 src={item.iconLink}

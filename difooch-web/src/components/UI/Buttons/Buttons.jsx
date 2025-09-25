@@ -1,3 +1,4 @@
+import { twMerge } from "tailwind-merge";
 export const Button = ({ variant = "primary", children, className, icon }) => {
   const staticStyles =
     "flex items-center gap-2 cursor-pointer hover:border-[1px] hover:border-primary border-[1px] border-transparent transition-all duration-300";
@@ -10,9 +11,10 @@ export const Button = ({ variant = "primary", children, className, icon }) => {
       "bg-white px-[15.61px] py-[7.8px] text-black1 rounded-[7.8px] text-[13.66px] leading-[20.49px] tracking-[0] font-bold font-family-jakarta",
   };
   return (
-    <button className={`${staticStyles} ${styles[variant]} ${className}`}>
+    <button className={`${staticStyles} ${styles[variant]} ${twMerge(className)}`}>
       {icon && (
         <img
+          className="w-[24px] h-[24px] sm:w-[32px] sm:h-[32px]"
           src={icon}
           alt="rocket icon"
         />
