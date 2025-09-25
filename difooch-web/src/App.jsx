@@ -8,6 +8,8 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import Features from "./components/Features/Features";
 import MultiLocation from "./components/MultiLocation/MultiLocation";
 import Price from "./components/Price/Price";
+import Ready from "./components/Ready/Ready";
+import Footer from "./components/Footer/Footer";
 const App = () => {
   return (
     <>
@@ -33,8 +35,10 @@ const App = () => {
             <Features />
             <MultiLocation />
             <Price />
+            <Ready />
           </div>
       </div>
+      <Footer />
     </div>
     </>
   );

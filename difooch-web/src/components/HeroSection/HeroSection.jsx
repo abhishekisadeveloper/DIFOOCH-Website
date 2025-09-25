@@ -21,7 +21,7 @@ const HeroSection = () => {
         alt="Hero Image"
       />
       <Button
-        className="mt-[29.94px] py-2"
+        className="mt-[29.94px] py-2 hover:bg-accent2 sm:py-4 sm:px-6"
         variant="primary"
         icon={HeroData[0].heroButton.icon}
         iconWidth="24"

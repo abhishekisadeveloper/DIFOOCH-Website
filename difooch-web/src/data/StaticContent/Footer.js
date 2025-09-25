@@ -21,15 +21,15 @@ export const FooterData = [
     FooterIcons: [
       {
         id: 1,
-        icon: "",
+        icon: "/FooterAssets/FooterIcon1.png",
       },
       {
         id: 2,
-        icon: "",
+        icon: "/FooterAssets/FooterIcon2.png",
       },
       {
         id: 3,
-        icon: "",
+        icon: "/FooterAssets/FooterIcon3.png",
       }
     ],
     FooterText: "@2025 Difooch. All rights reserved.",

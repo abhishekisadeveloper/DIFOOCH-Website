@@ -1,7 +1,7 @@
 export const PriceData = [
   {
     PriceHeading: "Simple Plans. No Hidden Fees.",
-    PriceRecommended: "Recommended",
+    CheckIcon: "/PriceAssets/check.svg",
     PriceLists: [
       {
         id: 1,
@@ -15,6 +15,7 @@ export const PriceData = [
         category: "Pro",
         amount: "Rs. 2,499",
         duration: "/month",
+        recommended: true,
         features: ["Unlimited orders", "Advanced dashboard", "WhatsApp alerts"],
       },
       {
