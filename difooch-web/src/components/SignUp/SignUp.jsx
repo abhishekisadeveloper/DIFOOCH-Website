@@ -22,7 +22,7 @@ const SignUp = () => {
           </Typography>
           <div className="w-full flex flex-col items-start mt-8">
             <Typography
-              className="text-small text-gray1 tracking-[100%] mb-2 font-normal"
+              className="text-small text-gray1 mb-2 font-normal"
               variant="h3"
             >
               Mobile Number <span className="text-required">*</span>
