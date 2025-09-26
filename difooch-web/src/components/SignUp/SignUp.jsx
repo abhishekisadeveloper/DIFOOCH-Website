@@ -15,7 +15,7 @@ const SignUp = () => {
             Enter your Phone Number
           </Typography>
           <Typography
-            className="text-small text-gray2 tracking-[100%] font-normal"
+            className="text-small text-gray2 font-normal"
             variant="h2"
           >
             We will send you the <b> 4 digit </b> verification code
