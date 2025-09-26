@@ -1,5 +1,6 @@
 import React from "react";
 import { HeroData, Button, Typography } from "../index";
+import { NavLink } from "react-router";
 const HeroSection = () => {
   return (
     <div className="flex flex-col text-mobile-heading-large items-center pt-8 sm:pt-12">
@@ -18,13 +19,15 @@ const HeroSection = () => {
         loading="lazy"
         alt="Hero Image"
       />
-      <Button
-        className="mt-[29.94px] sm:mt-12 sm:text-heading-small3 py-2 hover:bg-accent2 sm:py-4 sm:px-6"
-        variant="primary"
-        icon={HeroData[0].heroButton.icon}
-      >
-        {HeroData[0].heroButton.text}
-      </Button>
+      <NavLink to="/sign-up">
+        <Button
+          className="mt-[29.94px] sm:mt-12 sm:text-heading-small3 py-2 hover:bg-accent2 sm:py-4 sm:px-6"
+          variant="primary"
+          icon={HeroData[0].heroButton.icon}
+        >
+          {HeroData[0].heroButton.text}
+        </Button>
+      </NavLink>
     </div>
   );
 };
