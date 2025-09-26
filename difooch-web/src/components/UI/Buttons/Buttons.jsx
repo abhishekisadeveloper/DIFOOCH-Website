@@ -11,7 +11,7 @@ export const Button = ({ variant = "primary", children, className, icon }) => {
       "bg-white px-[15.61px] py-[7.8px] text-black1 rounded-[7.8px] text-[13.66px] leading-[20.49px] tracking-[0] font-bold font-family-jakarta",
   };
   return (
-    <button className={`${staticStyles} ${styles[variant]} ${twMerge(className)}`}>
+    <button className={twMerge(staticStyles, styles[variant], className)}>
       {icon && (
         <img
           className="w-[24px] h-[24px] sm:w-[32px] sm:h-[32px]"

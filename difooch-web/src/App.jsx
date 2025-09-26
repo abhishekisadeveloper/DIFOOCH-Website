@@ -13,9 +13,9 @@ import Footer from "./components/Footer/Footer";
 const App = () => {
   return (
     <>
-    <div className="bg-secondary">
-      <div className="max-w-[1440px] mx-auto APP">
-          <Logo />
+      <div className="bg-secondary">
+        <div className="max-w-[1440px] mx-auto APP">
+        <Logo />
           {/* horizontal line */}
           <div className="w-full h-[1px] mt-4 sm:mt-8">
             <img
@@ -24,11 +24,18 @@ const App = () => {
               alt="horizontalLine"
             />
           </div>
-        <div className="flex flex-col items-center mx-9">
-          <HeroSection />
-          <WhyDifooch />
-          <HowItWorks />
-        </div>
+          <div className="flex flex-col items-center mx-9 relative">
+            <HeroSection />
+            <WhyDifooch />
+            <HowItWorks />
+            <div className="bottom-9 right-9 fixed p-4 bg-accent hover:bg-accent2 rounded-[28px] cursor-pointer z-10 md:hidden">
+              <img
+                src="/whatsappIcon.svg"
+                alt=""
+                className="w-[23.85px] h-[24px] "
+              />
+            </div>
+          </div>
           <Advantages />
           <div className="flex flex-col items-center mx-9">
             <Testimonials />
@@ -37,9 +44,9 @@ const App = () => {
             <Price />
             <Ready />
           </div>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
     </>
   );
 };

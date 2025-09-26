@@ -2,7 +2,7 @@ import React from "react";
 import { HeroData, Button, Typography } from "../index";
 const HeroSection = () => {
   return (
-    <div className="flex flex-col items-center pt-8 sm:pt-12">
+    <div className="flex flex-col text-mobile-heading-large items-center pt-8 sm:pt-12">
       <Typography className="text-center" variant="h1">
         {HeroData[0].heroHeading}
       </Typography>

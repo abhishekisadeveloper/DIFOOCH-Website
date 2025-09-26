@@ -4,7 +4,7 @@ import { Typography, PriceData, Button } from "../index";
 const Price = () => {
   return (
     <div className="flex flex-col items-center mb-12 sm:mb-[90px]">
-      <Typography className="mb-[30px] sm:mb-12" variant="h2">
+      <Typography className="mb-[30px] text-mobile-heading-medium sm:mb-12" variant="h2">
         {PriceData[0].PriceHeading}
       </Typography>
       <div className="flex flex-col justify-center sm:flex-row sm:flex-wrap items-center sm:gap-12">
@@ -66,11 +66,15 @@ const Price = () => {
         Talk to Sales
       </Button>
       <Button
-        className="justify-center sm:text-heading-small3 w-[158.97px] sm:w-[230px] h-[39.02] sm:h-[64px] rounded-[7.8px] py-3 mb-4 sm:mb-0 bg-white"
+        className="justify-center sm:text-heading-small3 w-[158.97px] sm:w-[230px] h-[39.02] sm:h-[64px] rounded-[7.8px] py-3 mb-4 sm:mb-0 bg-white hover:bg-accent"
         variant="primary" 
       >
-        <img className="w-[24px] h-[24px] sm:w-[32px] sm:h-[32px]" src="./HeroImagesAssets/rocket.svg" alt="arrow" />
-        Talk to Sales
+        <span className="sm:gap-3">
+        <img className="w-[24px] h-[24px] sm:w-[32px] sm:h-[32px] sm:block hidden" src="./HeroImagesAssets/rocket.svg" alt="arrow" />
+        <img className="w-[13.21px] h-[17.07px] sm:w-[32px] sm:h-[32px] sm:hidden" src="./PriceAssets/arrow.svg" alt="arrow" />
+        </span>
+        
+        Start Free Trial
       </Button>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { Typography } from "../index";
 
 const HowItWorks = () => {
   return (
-    <div className="flex flex-col items-center gap-[30px] sm:gap-12">
+    <div className="flex flex-col items-center text-mobile-heading-medium gap-[30px] sm:gap-12">
       <Typography variant="h2">
         {HowItWorksData[0].howItWorksHeading}
       </Typography>

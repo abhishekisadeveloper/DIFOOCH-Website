@@ -4,7 +4,7 @@ import { WhyDifoochData, Typography } from "../index";
 const WhyDifooch = () => {
   return (
     <div className="flex flex-col my-[48px] sm:my-[90px] w-full p-5 bg-white rounded-[15px] items-center text-center">
-      <Typography className="sm:my-6" variant="h2">
+      <Typography className="sm:my-6 text-mobile-heading-medium" variant="h2">
         {WhyDifoochData[0].whyDifoochHeading}
       </Typography>
       <Typography className="pt-6 text-small md:w-[85%] leading-small2" variant="p">
