@@ -4,7 +4,7 @@ import { Typography } from "../index";
 const SignUp3 = () => {
   return (
     <div className="bg-secondary">
-      <div className="flex flex-col items-center text-center max-w-[1440px] mx-auto APP">
+      <div className="flex flex-col items-center text-center max-w-[1440px] h-screen mx-auto APP">
         <div className="w-full mt-[84px] mb-[262px]">
           <div className="mx-[62px]">
           <div className="w-full flex flex-col items-center">
