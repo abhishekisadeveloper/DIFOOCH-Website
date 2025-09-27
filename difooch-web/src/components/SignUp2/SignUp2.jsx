@@ -11,7 +11,9 @@ const SignUp2 = () => {
       <div className="flex flex-col items-center text-center max-w-[1440px] mx-auto APP">
         <div className="w-full mt-[84px] mb-[262px]">
             <div className="mx-[29px]">
+                <NavLink to="/">
           <Logo />
+          </NavLink>
           <Typography
             className="text-mobile-heading-medium mt-8 mb-3"
             variant="h2"
