@@ -11,13 +11,29 @@ import Price from "./components/Price/Price";
 import Ready from "./components/Ready/Ready";
 import Footer from "./components/Footer/Footer";
 import { Link } from "react-router";
+import { motion } from "motion/react";
 const App = () => {
   return (
     <>
       <div className="bg-secondary">
         <div className="max-w-[1440px] mx-auto APP">
-        <Logo />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ amount: 0.1, once: true }}
+          >
+            <Logo />
+          </motion.div>
           {/* horizontal line */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ amount: 0.1, once: true }}
+          >
           <div className="w-full h-[1px] mt-4 sm:mt-8">
             <img
               className="w-full h-full"
@@ -25,6 +41,7 @@ const App = () => {
               alt="horizontalLine"
             />
           </div>
+          </motion.div>
           <div className="flex flex-col items-center mx-9 relative">
             <HeroSection />
             <WhyDifooch />
@@ -42,8 +59,10 @@ const App = () => {
           </div>
           <Advantages />
           <div className="flex flex-col items-center mx-9">
+            
             <Testimonials />
             <Features />
+
             <MultiLocation />
             <Price />
             <Ready />
