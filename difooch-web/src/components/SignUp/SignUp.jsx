@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography } from "../index";
 import Logo from "../Logo";
-
+import { NavLink } from "react-router";
 const SignUp = () => {
   return (
     <div className="bg-secondary">
@@ -12,13 +12,13 @@ const SignUp = () => {
             className="text-mobile-heading-medium mt-8 mb-3"
             variant="h2"
           >
-            Enter your Phone Number
+          Enter your Phone Number
           </Typography>
           <Typography
             className="text-small text-gray2 font-normal"
             variant="h2"
           >
-            We will send you the <b> 4 digit </b> verification code
+            We will send you the <span className="text-gray1"> 4 digit </span> verification code
           </Typography>
           <div className="w-full flex flex-col items-start mt-8">
             <Typography
@@ -39,10 +39,12 @@ const SignUp = () => {
             </span>
 
             {/* Button */}
-            <div className="w-full flex flex-col items-center justify-center text-center">
+            <div className="flex flex-col w-full items-center justify-center text-center">
+              <NavLink className="w-full" to="/sign-up-2">
               <button className="w-full h-[57px] bg-accent hover:bg-accent2 font-semibold text-mobile-heading-small rounded-[16px] justify-center items-center text-black1">
                 Generate OTP
               </button>
+              </NavLink>
               <p className="text-mobile-heading-small my-8">Or</p>
               <button
                 className="w-full h-[57px] flex gap-[31.38px] bg-white hover:border-[1px] hover:border-primary font-semibold text-mobile-heading-small rounded-[16px] justify-center items-center text-black1"

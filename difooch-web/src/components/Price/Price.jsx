@@ -42,9 +42,9 @@ const Price = () => {
                   Get Started
                 </Button>
               </NavLink>
-              {item.features.map((feature) => {
+              {item.features.map((feature, index) => {
                 return (
-                  <div className="flex items-center mb-2 gap-3">
+                  <div className="flex items-center mb-2 gap-3" key={index}>
                     <img src={PriceData[0].CheckIcon} alt="check" />
                     <Typography
                       className="text-gray1 font-regular"

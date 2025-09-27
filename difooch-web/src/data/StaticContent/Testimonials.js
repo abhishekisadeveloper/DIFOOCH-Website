@@ -15,7 +15,7 @@ export const TestimonialsData = [
         stars: star,
       },
       {
-        id: 1,
+        id: 2,
         image: Testimonials1,
         line: line,
         name: "Tandoori Express",

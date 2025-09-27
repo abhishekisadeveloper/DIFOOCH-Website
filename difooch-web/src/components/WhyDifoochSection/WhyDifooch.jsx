@@ -12,7 +12,7 @@ const WhyDifooch = () => {
       </Typography>
       <ul className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center pt-[30px] sm:pt-10 w-full sm:w-[752px] sm:mb-6 gap-4 sm:gap-8">
         {WhyDifoochData[0].whyDifoochList1.map((item, index) => (
-          <li className="flex items-center">
+          <li className="flex items-center" key={index}>
             <div className="flex gap-[8.12px] sm:w-[360px] rounded-[15px] w-full p-4 bg-light-white text-black1 font-bold items-center">
               <img
                 className="bg-secondary rounded-[8px] w-10 h-10"
