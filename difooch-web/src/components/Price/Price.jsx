@@ -1,15 +1,20 @@
 import React from "react";
 import { Typography, PriceData, Button } from "../index";
+import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
+
 import { NavLink } from "react-router";
 const Price = () => {
   return (
     <div className="flex flex-col items-center mb-12 sm:mb-[90px]">
+      <ScrollAnimation>
       <Typography
         className="mb-[30px] text-mobile-heading-medium sm:mb-12"
         variant="h2"
       >
         {PriceData[0].PriceHeading}
       </Typography>
+      </ScrollAnimation>
+      <ScrollAnimation>
       <div className="flex flex-col justify-center sm:flex-row sm:flex-wrap items-center sm:gap-12">
         {PriceData[0].PriceLists.map((item) => {
           return (
@@ -68,6 +73,8 @@ const Price = () => {
           );
         })}
       </div>
+      </ScrollAnimation>
+      <ScrollAnimation>
       <div className="flex items-center sm:mt-12 gap-[11.71px] sm:gap-12">
         <Button
           className="justify-center sm:gap-3 sm:text-heading-small3 w-[158.97px] sm:w-[230px] h-[39.02] sm:h-[64px] rounded-[7.8px] py-3 mb-4 sm:mb-0 hover:bg-accent2"
@@ -95,6 +102,7 @@ const Price = () => {
           Start Free Trial
         </Button>
       </div>
+      </ScrollAnimation>
     </div>
   );
 };

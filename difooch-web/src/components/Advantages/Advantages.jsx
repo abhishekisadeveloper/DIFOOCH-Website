@@ -1,18 +1,22 @@
 import React from "react";
 import { Typography, AdvantageData } from "../index";
+import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 
 const Advantages = () => {
   return (
     <div className="flex flex-col items-center text-mobile-heading-medium text-center my-12 sm:my-[90px]">
+      <ScrollAnimation>
       <Typography className='flex flex-col items-center mx-9' variant="h2">
         {AdvantageData[0].AdvantagesDataHeading}
       </Typography>
+      </ScrollAnimation>
 
       {/* Slider wrapper */}
+        <ScrollAnimation>
       <div className="flex items-center text-center gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar w-full py-12">
         {AdvantageData[0].AdvantagesDataLists.map((item) => (
           // Cards.
-          <div
+            <div
             key={item.id}
             className="flex flex-col items-center text-center gap-2 flex-shrink-0 snap-start drop-shadow-lg drop-shadow-[rgba(0,0,0,0.25)]"
           >
@@ -41,6 +45,7 @@ const Advantages = () => {
           </div>
         ))}
       </div>
+      </ScrollAnimation>
     </div>
   );
 };

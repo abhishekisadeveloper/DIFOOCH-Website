@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { Typography } from "../index";
 import Logo from "../Logo";
+import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 import { useNavigate, NavLink } from "react-router";
 const SignUp2 = () => {
     const navigate = useNavigate();
     const [otp, setOtp] = useState(["", "", "", ""]);
 
   return (
+      <ScrollAnimation>
     <div className="bg-secondary">
       <div className="flex flex-col items-center text-center max-w-[1440px] mx-auto APP">
         <div className="w-full mt-[84px] mb-[262px]">
@@ -75,6 +77,7 @@ const SignUp2 = () => {
         </div>
       </div>
     </div>
+      </ScrollAnimation>
   );
 };
 

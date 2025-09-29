@@ -2,9 +2,11 @@ import React from "react";
 import Logo from "../Logo";
 import { Typography } from "../index";
 import { motion } from "motion/react";
+import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 import { NavLink } from "react-router";
 const SignUp3 = () => {
   return (
+      <ScrollAnimation>
     <div className="bg-secondary">
       <div className="flex flex-col items-center text-center max-w-[1440px] h-screen mx-auto APP">
         <div className="w-full mt-[84px] mb-[262px]">
@@ -41,6 +43,7 @@ const SignUp3 = () => {
         </div>
       </div>
     </div>
+      </ScrollAnimation>
   );
 };
 

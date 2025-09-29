@@ -1,10 +1,14 @@
 import React from 'react'
 import { TestimonialsData, Typography } from '../index'
+import ScrollAnimation from '../ScrollAnimation/ScrollAnimation'
 
 const Testimonials = () => {
   return (
     <div>
+        <ScrollAnimation>
         <Typography className='mb-7.5 sm:mb-12 text-mobile-heading-medium text-center' variant="h2">{TestimonialsData[0].TestimonialsDataHeading}</Typography>
+        </ScrollAnimation>
+        <ScrollAnimation>
         <div className='flex items-center text-center gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar w-full'>
             {TestimonialsData[0].TestimonialsData.map((item) => (
                 <div key={item.id} className='flex flex-col snap-start flex-shrink-0 max-w-[100%] md:max-w-[360px] items-center p-8 sm:p-[36.23px] bg-white rounded-3xl text-center'>
@@ -17,6 +21,7 @@ const Testimonials = () => {
                 </div>
             ))}
         </div>
+        </ScrollAnimation>
     </div>
   )
 }

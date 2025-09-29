@@ -1,9 +1,11 @@
 import React from "react";
 import { Typography, FooterData } from "../index";
+import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 
 const Footer = () => {
   return (
     <>
+      <ScrollAnimation>
       <div className="bg-primary font-family-jakarta">
         <div className="flex flex-col sm:flex-row max-w-[1440px] sm:justify-between mx-auto">
           <div className="flex flex-col items-start sm:mb-24 pt-10 px-9">
@@ -38,6 +40,7 @@ const Footer = () => {
           </Typography>
         </div>
       </div>
+      </ScrollAnimation>
     </>
   );
 };
