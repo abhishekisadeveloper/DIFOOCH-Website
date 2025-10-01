@@ -1,11 +1,61 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Typography } from "../index";
 import Logo from "../Logo";
 import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
-import { useNavigate, NavLink } from "react-router";
+import { useNavigate, NavLink, useLocation } from "react-router";
 const SignUp2 = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const [otp, setOtp] = useState(["", "", "", ""]);
+    const [error, setError] = useState("");
+    const inputRefs = useRef([]);
+    
+    // Get phone number from previous page
+    const phoneNumber = location.state?.phoneNumber || "+91 XXXXXXXXXX";
+
+    // For handling Changes or inputs.
+    const handleChange = (value, index) => {
+      if (!/^[0-9]?$/.test(value)) return;
+
+      const newOtp = [...otp];
+      newOtp[index] = value
+      setOtp(newOtp);
+
+      if (value && index < otp.length - 1) {
+        inputRefs.current[index + 1].focus();
+      }
+    }
+
+    // For handling BackSpace logic
+    const handleBackspace = (e, index) => {
+      if (e.key === "Backspace") {
+        const newOtp = [...otp];
+
+        if (otp[index]) {
+          newOtp[index] = ''
+          setOtp(newOtp)
+          
+        } else if (index > 0) {
+          inputRefs.current[index - 1].focus();
+        }
+      }
+    }
+
+    // Handle OTP verification
+    const handleVerify = (e) => {
+      e.preventDefault();
+      
+      // Check if all OTP fields are filled
+      if (otp.some(digit => digit === "")) {
+        setError("Please enter complete OTP");
+        return;
+      }
+      
+      // If validation passes, navigate to next page
+      navigate("/sign-up-3");
+    };
+
+
 
   return (
       <ScrollAnimation>
@@ -26,24 +76,25 @@ const SignUp2 = () => {
             className="text-small flex justify-center tracking-[0.01em] text-gray2 font-normal"
             variant="h2"
           >
-            Enter the OTP sent to <span className="text-gray1 flex items-center ml-[3px]">+91 9908678621 <img className="ml-2 cursor-pointer hover:opacity-80 w-[16px] h-[16px] transition-all" src="/pencil.svg" onClick={() => {navigate("/sign-up")}} alt="" /></span>
+            Enter the OTP sent to <span className="text-gray1 flex items-center ml-[3px]">{phoneNumber} <img className="ml-2 cursor-pointer hover:opacity-80 w-[16px] h-[16px] transition-all" src="/pencil.svg" onClick={() => {navigate("/sign-up")}} alt="" /></span>
           </Typography>
           <div className="w-full flex flex-col justify-center items-center mt-8">
 
             {/* Input container */}
-            <div className="mb-[82px]">
+            <div className={error ? "mb-[42px]" : "mb-[82px]"}>
             <span className="w-full h-[48px] gap-[18.64px] mb-8 justify-center rounded-[16px] flex items-center">
               {otp.map((item, index) => (
                 <input
                   key={index}
                   type="number"
-                  className="w-[48px] h-[48px] py-[15px] px-[7px] focus:outline-none focus-within:border-primary rounded-[16px] border-[#B7BCCA99] border-[1.07px] text-center"
-                  value={item}
+                  className={`w-[48px] h-[48px] py-[15px] px-[7px] focus:outline-none focus-within:border-primary rounded-[16px] ${error ? 'border-required' : 'border-[#B7BCCA99]'} border-[1.07px] text-center`}
                   onChange={(e) => {
-                    const newOtp = [...otp];
-                    newOtp[index] = e.target.value;
-                    setOtp(newOtp);
+                    handleChange(e.target.value, index);
+                    setError("");
                   }}
+                  onKeyDown={(e) => handleBackspace(e, index)}
+                  ref={(el) => (inputRefs.current[index] = el)}
+                  value={item}
                 />
               ))}
             </span>
@@ -51,19 +102,25 @@ const SignUp2 = () => {
               className="text-small text-gray2 tracking-[0.01em] mb-2 font-normal"
               variant="h3"
             >
-              Didn’t recieve OTP ? <span className="text-required">Resend</span>
+              Didn't recieve OTP ? <span className="text-required cursor-pointer">Resend</span>
+            {error && (
+              <p className="text-required text-small text-center mt-2">
+                {error}
+              </p>
+            )}
             </Typography>
             </div>
 
             {/* Button */}
             <div className="md:max-w-[70%] w-full flex flex-col items-center justify-center text-center">
-                <NavLink className="w-full" to="/sign-up-3">
-              <button className="w-full h-[57px] bg-accent hover:bg-accent2 font-semibold text-mobile-heading-small rounded-[16px] justify-center items-center text-black1">
+              <button 
+                onClick={handleVerify}
+                className="w-full h-[57px] cursor-pointer bg-accent hover:bg-accent2 font-semibold text-mobile-heading-small rounded-[16px] justify-center items-center text-black1"
+              >
                 Verify
               </button>
-              </NavLink>
               <p className="text-mobile-heading-small my-8">Or</p>
-              <button className="w-full h-[57px] flex gap-[31.38px] bg-white hover:border-[1px] hover:border-primary font-semibold text-mobile-heading-small rounded-[16px] justify-center items-center text-black1">
+              <button className="w-full h-[57px] flex gap-[31.38px] bg-white hover:border-[1px] hover:border-primary cursor-pointer font-semibold text-mobile-heading-small rounded-[16px] justify-center items-center text-black1">
                 <img
                   src="/googleIcon.svg"
                   alt=""
