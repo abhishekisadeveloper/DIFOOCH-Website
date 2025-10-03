@@ -3,6 +3,7 @@ import { Typography } from "../index";
 import Logo from "../Logo";
 import { NavLink, useNavigate } from "react-router";
 import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
+// import UsePostApiRequest from "../../CustomHooks/UsePostApiRequest";
 
 const SignUp = () => {
   const navigate = useNavigate();
