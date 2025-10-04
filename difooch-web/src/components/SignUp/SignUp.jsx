@@ -3,12 +3,21 @@ import { Typography } from "../index";
 import Logo from "../Logo";
 import { NavLink, useNavigate } from "react-router";
 import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
-// import UsePostApiRequest from "../../CustomHooks/UsePostApiRequest";
+import UsePostApiRequest from "../../CustomHooks/UsePostApiRequest";
 
 const SignUp = () => {
   const navigate = useNavigate();
   const [phoneNumber, setPhoneNumber] = useState("");
   const [error, setError] = useState("");
+  const {sendOtp, verifyOTP} = UsePostApiRequest()
+
+  const handleSendOTP = async () => {
+    const response = await sendOtp(phoneNumber);
+    console.log(response);
+    
+  };
+
+  
 
   const handlePhoneChange = (e) => {
     const value = e.target.value;
@@ -19,8 +28,8 @@ const SignUp = () => {
     }
   };
 
-  const handleGenerateOTP = (e) => {
-    e.preventDefault();
+  const handleGenerateOTP = () => {
+    
     
     // Validate phone number
     if (!phoneNumber) {
@@ -32,9 +41,11 @@ const SignUp = () => {
       setError("Phone number must be 10 digits");
       return;
     }
+
     
     // If validation passes, navigate to OTP page
-    navigate("/sign-up-2", { state: { phoneNumber: `+91 ${phoneNumber}` } });
+    navigate("/sign-up-2", { state: { phoneNumber: `${phoneNumber}` } });
+    handleSendOTP()
   };
 
   return (
